@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Enu</title>
+    <style>
+      body{
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        background-image: url(../images/wp12843981-anime-sky-art-wallpapers.jpg);
+        background-size: cover;
+    }
+    header{
+      color: white;
+    }
+        button {
+            letter-spacing: 2px;
+            color: black;
+            padding: center;
+            border: 2px solid white;
+            border-radius: 20px;
+            background-color: transparent;
+            font-size: 12px;
+            grid-template-columns: repeat(3, 3fr);
+            grid-template-rows: repeat(5, 1fr);
+            width: 100px;
+            height: 100px;
+            margin-right: 80px;
+            margin-bottom: 30px;
+        }
+        .heading-2 {
+          padding: 20px;
+          border: 2px solid black;
+          justify-content: space-between;
+          border-radius: 20px;
+          background-color: transparent;
+          font-size: 12px;
+        }
+        .heading-2 a {
+          color: wheat;
+          margin: 200px;
+          text-decoration: none;
+          font-size: 20px;
+        }
+
+        @media screen and (max-width: 500px) {
+          header{
+            color: black;
+          }
+          body {
+            background-image: url(../images/3903c2c6a14b42f5daf60b08a8e46a9a.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Optional - prevents scrolling */
+          }
+            button {
+                color: black;
+                padding: 5px;
+                border: 2px solid black;
+                border-radius: 10px;
+                background-color: transparent;
+                font-size: 6px;
+                width: 50px;
+                height: 50px;
+                margin: 20px;
+            }
+            .heading-2 a {
+              color: black;
+              margin: 20px;
+              text-decoration: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header><h1>Hindi Tuition</h1></header>
+    <div class="heading-2">
+      <a href="../index.html">Alphabet</a>
+      <a href="./Pages/Number.html">Number</a>
+  </div>
+  <br>
+  <br>
+  <div class="button-container">
+    <button id="readButton1"><h1>एक</h1><p>One</p></button>
+    <button id="readButton2"><h1>दो</h1><p>Two</p></button>
+    <button id="readButton3"><h1>तीन</h1><p>Three</p></button>
+    <button id="readButton4"><h1>चार</h1><p>Four</p></button>
+    <button id="readButton5"><h1>पांच</h1><p>Five</p></button>
+</div>
+    <button id="readButton6"><h1>छह</h1><p>Six</p></button>
+    <button id="readButton7"><h1>सात</h1><p>Seven</p></button>
+    <button id="readButton8"><h1>आठ</h1><p>Eight</p></button>
+    <button id="readButton9"><h1>नौ</h1><p>Nine</p></button>
+    <button id="readButton10"><h1>दस</h1><p>Ten</p></button>
+    <button id="readButton11"><h1>ग्यारह</h1><p>Eleven</p></button>
+    <button id="readButton12"><h1>बारह</h1><p>Twelve</p></button>
+    <button id="readButton13"><h1>तेरह</h1><p>Thirteen</p></button>
+    <button id="readButton14"><h1>चौदह</h1><p>Fourteen</p></button>
+    <button id="readButton15"><h1>पंद्रह</h1><p>Fifteen</p></button>
+    <button id="readButton16"><h1>सोलह</h1><p>Sixteen</p></button>
+    <button id="readButton17"><h1>सत्रह</h1><p>Seventeen</p></button>
+    <button id="readButton18"><h1>अठारह</h1><p>Eighteen</p></button>
+    <button id="readButton19"><h1>उन्नीस</h1><p>Nineteen</p></button>
+    <button id="readButton20"><h1>बीस</h1><p>Twenty</p></button>
+    <button id="readButton21"><h1>सौ</h1><p>Hundred</p></button>
+    <div class="button-container">
+    <button id="readButton22"><h1>एक हज़ार</h1><p>Onethousand</p></button>
+    <button id="readButton23"><h1>दस लाख</h1><p>Million</p></button>
+  </div>
+    <script>
+      const buttons = document.querySelectorAll('button');
+
+      buttons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+          const buttonText = button.textContent;
+          const url = `https://translate.google.com/translate_tts?ie=UTF-8&tl=hi-IN&client=tw-ob&q=${encodeURI(buttonText)}`;
+
+          const audio = new Audio(url);
+          audio.play();
+        });
+      });
+    </script>
+</body>
+</html>
